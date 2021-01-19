@@ -21,10 +21,18 @@
                 <label for="beautAddress" style="font-weight: 600">Address</label>
                 <input type="text" class="form-control" style="font-size: 20px; font-weight: 500; border: none; border-bottom: 2px solid #e75480; background-color:pink;" id="beautAddress" value={{$address}} required>
             </div>
+             <div class="form-group col-md-5 mb-5">
+                <label for="beautPassword" style="font-weight: 600">Change Password</label>
+                <input type="password" id="beautPassword" class="form-control" style="font-size: 20px; font-weight: 500; border: none; border-bottom: 2px solid #e75480; background-color:pink;"  autocomplete="new-password">
+            </div>
+            <div class="form-group col-md-5 mb-5">
+                <label for="beautPassword1" style="font-weight: 600">Confirm Password</label>
+                <input type="password" class="form-control" style="font-size: 20px; font-weight: 500; border: none; border-bottom: 2px solid #e75480; background-color:pink;" id="beautPassword1" autocomplete="new-password">
+            </div>
             <div style="margin-top: 30px; display: flex; flex-direction: row; justify-content: center;">
-                                                        <button type="submit" class="btn btn-primary" style="background-color: #e75480; color: white; border: 10px solid #e75480; border-radius: 40px; font-weight: 700">
-                                    {{ __('Save') }}
-                                </button>
+                <button type="submit" class="btn btn-primary" style="background-color: #e75480; color: white; border: 10px solid #e75480; border-radius: 40px; font-weight: 700">
+                    {{ __('Save') }}
+                </button>
             </div>
         </form>
     </div>

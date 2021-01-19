@@ -29,7 +29,7 @@
                 flex-flow: row wrap;
             }
             .sidebar {
-                padding-bottom: 15%;
+                padding-bottom: 30%;
                 border: 2px solid #e75480;
                 background-color: pink;
                 height: 100%;
@@ -39,14 +39,14 @@
             .sidebar a {
                 display: block;
                 font-weight: 600; 
-                font-size: 20px;
-                width:100%; 
+                font-size: 24px;
+                width: 100%; 
                 height: 10%; 
                 background-color: pink;
                 text-decoration: none;
                 text-align: left;
                 border-bottom: 2px solid #e75480;
-                padding: 16px;
+                padding: 18px;
             }
                 /* Active/current link */
             .sidebar a:active {
@@ -156,31 +156,65 @@
             @yield('content')
             @yield('sidebarMenu')
         </div>
-        <footer>
-            <div>
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" style="height: 800px;" src="https://cdn2.howtostartanllc.com/images/business-ideas/business-idea-images/makeup-artist-business.jpg" alt="makeup">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" style="height: 800px;" src="https://img.onmanorama.com/content/dam/mm/en/lifestyle/beauty-and-fashion/images/2017/5/10/hairdressing.jpg.image.784.410.jpg" alt="hair">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" style="height: 800px" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhdXR5JTIwc2Fsb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="facial">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" style="height: 800px" src="https://img.grouponcdn.com/iam/2rjNNQDTNpKGSVaVzkR9oHT2mS9L/2r-2048x1229/v1/c700x420.jpg" alt="nails">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" style="height: 800px" src="https://thumbs.dreamstime.com/b/applying-henna-tattoo-women-hands-artist-mehndi-traditional-indian-decorative-art-close-up-top-view-87271640.jpg" alt="mehndi">
-                        </div>
+        <footer class=" text-center text-lg-start" style="background-color: rgba(0, 0, 0, 0.1)">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="https://cdn2.howtostartanllc.com/images/business-ideas/business-idea-images/makeup-artist-business.jpg" alt="makeup">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="https://img.onmanorama.com/content/dam/mm/en/lifestyle/beauty-and-fashion/images/2017/5/10/hairdressing.jpg.image.784.410.jpg" alt="hair">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="https://img.grouponcdn.com/iam/2rjNNQDTNpKGSVaVzkR9oHT2mS9L/2r-2048x1229/v1/c700x420.jpg" alt="nails">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhdXR5JTIwc2Fsb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="facial">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="https://thumbs.dreamstime.com/b/applying-henna-tattoo-women-hands-artist-mehndi-traditional-indian-decorative-art-close-up-top-view-87271640.jpg" alt="mehndi">
                     </div>
                 </div>
-                <div style="height: 200px; background-color: lightgray; text-align: center; padding-top: 90px; padding-bottom: 90px">
-                    <h4>Copy Rights by Bel Salone</h4>
-                </div>
             </div>
+
+            <!-- Grid container -->
+            <div class="container p-4">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Footer text</h5>
+
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                        aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                        </p>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Footer text</h5>
+
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                        aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                        </p>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2021 Copyright:
+                <a class="text-dark" href="#">Bel Salone</a>
+            </div>
+            <!-- Copyright -->
         </footer>
     </body>
 </html>

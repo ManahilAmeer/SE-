@@ -21,7 +21,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4" style="font-weight: 500">Welcome Back!</h1>
                                     </div>
-                                    <form method="get" class="user" action="{{URL::to('/logs')}}">
+                                    <form method="get" class="user" action="{{URL::to('/Customlogs')}}">
                                         @csrf
                                         <div class="form-group">
                                             <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror"  style="border-radius: 10px;" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus

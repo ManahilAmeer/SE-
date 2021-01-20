@@ -26,7 +26,7 @@
                                 </div> -->
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input id="name" type="text" class="form-control form-control-user @error('name') is-invalid @enderror" style="border-radius: 10px;" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
+                                        <input id="name" type="text"  class="form-control form-control-user @error('name') is-invalid @enderror" style="border-radius: 10px;" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
                                             placeholder="First Name">
                                             @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -74,7 +74,7 @@
                                 @enderror
                                     </div>
                                     <div class="col-sm-6">
-                                        <input id="password-confirm" type="password" class="form-control" style="border-radius: 10px;" name="password_confirmation" required autocomplete="new-password"
+                                        <input id="password-confirm" onkeyup='GetSelectedText();' type="password" class="form-control" style="border-radius: 10px;color:red" name="password_confirmation" required autocomplete="new-password"
                                          placeholder="Repeat Password">
                                     </div>
                                 </div>
@@ -86,10 +86,10 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="new-forgot" style="color: #e75480; font-weight: 400">Forgot Password?</a>
+                                <a class="small" href="forgot" style="color: #e75480; font-weight: 400">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="new-login" style="color: #e75480; font-weight: 400">Already have an account? Login!</a>
+                                <a class="small" href="login" style="color: #e75480; font-weight: 400">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
@@ -125,6 +125,18 @@
                 }
 
 			}</script> -->
+            <script>
+    function GetSelectedText(){
+                // var e = document.getElementById("password-confirm");
+                // if(typeof(e)=='undefined'){
+                //   var result='Beautician';   
+                // }
+
+				if(document.getElementById('password-confirm').value ==document.getElementById('password').value){
+                    document.getElementById('password-confirm').style.color='Green';
+                }
+
+			}</script>
 
 </body>
 @endsection

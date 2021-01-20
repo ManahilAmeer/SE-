@@ -25,3 +25,5 @@ Route::view('/CustomRegister',"CustomRegister");
 Route::view('/Beautician',"beautProfile");
 Route::get('/store',"UserController@store");
 Route::get('/logs',"UserController@logs");
+Route::get('/CustomStore',"CustomerController@CustomStore");
+Route::get('/Customlogs',"CustomerController@Customlogs");

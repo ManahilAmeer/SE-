@@ -44,7 +44,8 @@ class CustomerController extends Controller
 return view("index");
         }
         else{
-            print_r("sorry");
+            echo '<script>alert("Enter right information")</script>'; 
+            return view("CustomLogin");
         }
 }
 }

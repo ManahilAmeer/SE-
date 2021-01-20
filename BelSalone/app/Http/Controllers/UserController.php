@@ -43,7 +43,9 @@ class UserController extends Controller
            return view('beautProfile',['name'=>$name,'address'=>$Address,'email'=>$email,'phone'=>$phone]);
         }
         else{
-            print_r("sorry");
+            echo '<script>alert("Enter right information")</script>'; 
+            return view("login");
+        
         }
 }
 }

@@ -14,10 +14,17 @@ class CustomerController extends Controller
 //        print_r($request->input());
         $name=$request->input('name');
         $email=$request->input('email');
-        $password=$request->input('password');
-         DB::insert('INSERT INTO customer(customer_id, customer_name, customer_email, customer_password) VALUES (?,?,?,?)',[null,$name,$email,$password]);
+        echo $password=$request->input('password');
+        echo $con_password=$request->input('password_confirmation');
+        if($password==$con_password)
+{         DB::insert('INSERT INTO customer(customer_id, customer_name, customer_email, customer_password) VALUES (?,?,?,?)',[null,$name,$email,$password]);
          //return view('beautProfile',['name'=>$name,'address'=>$Address,'email'=>$email,'phone'=>$phone]);
          return view("index");
+}
+else{
+    echo '<script>alert("Enter same password ")</script>'; 
+    return view("CustomRegister");
+}
 }
     public function Customlogs(request $request)
     {

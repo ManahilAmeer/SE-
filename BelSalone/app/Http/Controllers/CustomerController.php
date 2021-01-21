@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Providers\Customer;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\DB;

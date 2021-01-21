@@ -17,7 +17,8 @@ class Feedback extends Migration
             $table->id('feedback_id');
             $table->string('feedback_review');
             $table->integer('feedback_rating');
-            $table->bigInteger('appointment_id');
+            $table->bigInteger('appointment_id')->unsigned();
+            $table->foreign('appointment_id')->references('appointment_id')->on('appointment');
         });
     }
 

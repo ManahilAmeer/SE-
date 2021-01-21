@@ -19,9 +19,12 @@ class Appointment extends Migration
             $table->time('appointment_time');
             $table->string('appointment_status');
             $table->integer('appointment_payment');
-            $table->bigInteger('beautician_id');
-            $table->bigInteger('customer_id');
-            $table->bigInteger('service_id');
+            $table->bigInteger('beautician_id')->unsigned();
+            $table->bigInteger('customert_id')->unsigned();
+            $table->bigInteger('service_id')->unsigned();
+            $table->foreign('beautician_id')->references('beautician_id')->on('beautician');
+            // $table->foreign('customer_id')->references('customer_id')->on('customer');
+            $table->foreign('service_id')->references('service_id')->on('service');
         });
     }
 

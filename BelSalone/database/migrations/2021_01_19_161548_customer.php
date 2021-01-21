@@ -14,10 +14,10 @@ class Customer extends Migration
     public function up()
     {
         Schema::create('Customer', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->id('customer_id');
+            $table->string('customer_name');
+            $table->string('customer_email')->unique();
+            $table->string('customer_password');
         });
     }
 

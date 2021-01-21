@@ -132,7 +132,7 @@ body {
             <div class="col-md-3" style="margin-bottom:20px">
                 <div class="card p-2 py-3 text-center">
                     {{-- <div class="img mb-2"> <img src="https://i.imgur.com/LohyFIN.jpg" width="70" class="rounded-circle"> </div> --}}
-                    <h3 id="beutName" class="mb-0">Beautician 1</h3>
+                    <h3 class="beutName" class="mb-0">Beautician 1</h3>
                     <h4 id="serviceName" class="mb-0">Service 1</h4>
                     <h5 id="serviceCategory">Service Category</h5>
                     <h6 id="Price">1000</h6>
@@ -172,7 +172,7 @@ body {
             <div class="col-md-3" style="margin-bottom:20px">
                 <div class="card p-2 py-3 text-center">
                     <div class="img mb-2"> <img src="https://i.imgur.com/0LKZQYM.jpg" width="70" class="rounded-circle"> </div>
-                    <h5 id="beutName" class="mb-0">Anna Maul</h5> <small>Eye Specialist</small>
+                    <h5 class="beutName" class="mb-0">Anna Maul</h5> <small>Eye Specialist</small>
                     <div class="ratings mt-2"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
                     <div class="mt-4 apointment"> <button  class="btn btn-success text-uppercase">View Details</button> <button onclick='GetData();' class="btn btn-success text-uppercase">Book Appointment</button></div>
                 </div>
@@ -205,7 +205,7 @@ body {
     </div>
     <script>
     function GetData(){
-        var beautName=document.getElementById('beutName').textContent;
+        var beautName=document.getElementsByClassName('beutName')[0].textContent;
         var Price=document.getElementById('Price').textContent;
         var serviceName=document.getElementById('serviceName').textContent;
         

@@ -8,9 +8,9 @@
             <h3 align="center" style="color: #e75480; font-weight: 700; padding-top: 20px">Beautician Name</h3>
         </div>
         <a href="#" class="w3-button w3-hover-pink w3-active-pink">Profile<span class="sr-only">(current)</span></a>
-        <a href="#" class="w3-button w3-hover-pink">Manage Services</a>
-        <a href="#" class="w3-button w3-hover-pink">Appointments</a>
-        <a href="#" class="w3-button w3-hover-pink">Approved Appointments</a>
+        <a href="beautServices" class="w3-button w3-hover-pink">Manage Services</a>
+        <a href="appointments" class="w3-button w3-hover-pink">Appointments</a>
+        <a href="approvedAppointments" class="w3-button w3-hover-pink">Approved Appointments</a>
     </div>
     <div style="flex-grow: 9; border: 2px solid #e75480;">
         @yield('beaut_profile')

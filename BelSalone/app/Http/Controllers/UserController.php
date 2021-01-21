@@ -18,7 +18,7 @@ class UserController extends Controller
         $password=$request->input('password');
         $con_password=$request->input('password_confirmation');
         if($password==$con_password)
-{   DB::insert('INSERT INTO beautician(id, name, email, password, Phone, Address) VALUES (?,?,?,?,?,?)',[null,$name,$email,$password,$phone,$Address]);
+{   DB::insert('INSERT INTO beautician(beautician_id, beautician_name, beautician_email, beautician_password, beautician_Phone, beautician_Address) VALUES (?,?,?,?,?,?)',[null,$name,$email,$password,$phone,$Address]);
          return view('beautProfile',['name'=>$name,'address'=>$Address,'email'=>$email,'phone'=>$phone]);
 }
 else{
@@ -32,18 +32,18 @@ else{
 
         $email=$request->input('email');
         $password=$request->input('password');
-        $matchThese = ['email' => $email, 'password' => $password];
+        $matchThese = ['beautician_email' => $email, 'beautician_password' => $password];
         $id=DB::table('beautician')->where($matchThese)->get()->toArray();
         //$result = query($id);
         //$id = DB::select('select id from beautician where `email` = ? and `password`=?', [$email,$password]);
-        $Address=DB::select('select address from beautician where email=? ',[$email]);
-       $name=DB::select('select name from beautician where email=? ',[$email]);
-        $phone=DB::select('select phone from beautician where email=? ',[$email]);
+        $Address=DB::select('select beautician_address from beautician where beautician_email=? ',[$email]);
+       $name=DB::select('select beautician_name from beautician where beautician_email=? ',[$email]);
+        $phone=DB::select('select beautician_phone from beautician where beautician_email=? ',[$email]);
         // echo $data=['name'=>$name,'address'=>$Address,'email'=>$email,'phone'=>$phone];
         foreach ($id as $user) {
-          $name=$user->name;
-          $Address=$user->Address;
-          $phone=$user->Phone;
+          $name=$user->beautician_name;
+          $Address=$user->beautician_Address;
+          $phone=$user->beautician_Phone;
     }
 
         if(count($id)){

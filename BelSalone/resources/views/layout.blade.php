@@ -123,29 +123,29 @@
                             <a class="nav-link" href="#" style="font-weight: 700; font-size: 20px;">About</a>
                         </li>
                     </ul>
-                    <div>
+                    <div style="padding-left: 0px; padding-right: 50px">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" style="font-weight: 700; font-size: 20px; background-color:#e75480; border:0px; color:rgba(0,0,0,.5); padding:5px 20px;"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Login
-  </button>
-  <div class="dropdown-menu" style="font-weight: 700; font-size: 12px; background-color:lightgray; border:0px; color:rgba(0,0,0,.5); padding:5px 20px;" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item"  href="login">Login as Beautician</a>
-    <a class="dropdown-item" href="CustomLogin">Login as Customer</a>
-  </div>
-</div>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" style="font-weight: 700; font-size: 20px; background-color:#e75480; border:0px; color:rgba(0,0,0,.5);"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Login
+                                    </button>
+                                    <div class="dropdown-menu" style="font-weight: 700; font-size: 14px; background-color:pink; border:0px; color:rgba(0,0,0,.5);" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item"  href="login">Login as Beautician</a>
+                                        <a class="dropdown-item" href="CustomLogin">Login as Customer</a>
+                                    </div>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" style="font-weight: 700; font-size: 20px; background-color:#e75480; border:0px; color:rgba(0,0,0,.5); padding:5px 20px;"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Register
-  </button>
-  <div class="dropdown-menu" style="font-weight: 700; font-size: 12px; background-color:lightgray; border:0px; color:rgba(0,0,0,.5); padding:5px 20px;" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="register">Register as Beautician</a>
-    <a class="dropdown-item" href="CustomRegister">Register as Customer</a>
-  </div>
-</div>
+                                    <button class="btn btn-secondary dropdown-toggle" style="font-weight: 700; font-size: 20px; background-color:#e75480; border:0px; color:rgba(0,0,0,.5);"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Register
+                                    </button>
+                                    <div class="dropdown-menu" style="font-weight: 700; font-size: 14px; background-color:pink; border:0px; color:rgba(0,0,0,.5);" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="register">Register as Beautician</a>
+                                        <a class="dropdown-item" href="CustomRegister">Register as Customer</a>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>

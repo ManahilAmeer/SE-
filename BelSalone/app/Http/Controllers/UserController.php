@@ -16,8 +16,15 @@ class UserController extends Controller
         $Address=$request->input('Address');
         $email=$request->input('email');
         $password=$request->input('password');
-         echo   DB::insert('INSERT INTO beautician(id, name, email, password, Phone, Address) VALUES (?,?,?,?,?,?)',[null,$name,$email,$password,$phone,$Address]);
+        $con_password=$request->input('password_confirmation');
+        if($password==$con_password)
+{   DB::insert('INSERT INTO beautician(id, name, email, password, Phone, Address) VALUES (?,?,?,?,?,?)',[null,$name,$email,$password,$phone,$Address]);
          return view('beautProfile',['name'=>$name,'address'=>$Address,'email'=>$email,'phone'=>$phone]);
+}
+else{
+    echo '<script>alert("Enter same password")</script>'; 
+    return view("register");
+}
 }
     public function logs(request $request)
     {

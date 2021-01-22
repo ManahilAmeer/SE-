@@ -35,7 +35,7 @@
                                 @enderror
                                     </div>
                                 <div class="form-group">
-                                    <input id="phone" type="text" class="form-control form-control-user @error('phone') is-invalid @enderror" style="border-radius: 10px;" name="phone" value="{{ old('phone') }}" required autocomplete="phone"
+                                    <input id="phone" type="tel" class="form-control form-control-user @error('phone') is-invalid @enderror" style="border-radius: 10px;" pattern="[0-9]{4}-[0-9]{7}" name="phone" value="{{ old('phone') }}" required autocomplete="phone"
                                         placeholder="Phone Number" style="visibility: hidden;">
                                         @error('phone')
                                     <span class="invalid-feedback" role="alert">

@@ -30,7 +30,7 @@
                 <input name="conPass" type="password" class="form-control" style="font-size: 20px; font-weight: 500; border: none; border-bottom: 2px solid #e75480; background-color:pink;" id="beautPassword1" autocomplete="new-password">
             </div>
             <div style="margin-top: 30px; display: flex; flex-direction: row; justify-content: center;">
-                <button type="submit" class="btn btn-primary" style="background-color: #e75480; color: white; border: 10px solid #e75480; border-radius: 40px; font-weight: 700">
+                <button type="submit" class="btn btn-primary" style="width: 20%; background-color: #e75480; color: white; border: 10px solid #e75480; border-radius: 40px; font-weight: 700">
                     {{ __('Save') }}
                 </button>
             </div>

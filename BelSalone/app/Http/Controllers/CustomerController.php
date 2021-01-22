@@ -47,8 +47,11 @@ else{
     // }
 
         if(count($id)){
+        session_start();
+        $request->session()->put('name',$email); 
+            return view("index");
 //           return view('beautProfile',['name'=>$name,'address'=>$Address,'email'=>$email,'phone'=>$phone]);
-return view("index");
+
         }
         else{
             echo '<script>alert("Enter right information")</script>'; 

@@ -24,6 +24,7 @@ Route::view('/CustomLogin',"CustomLogin");
 Route::view('/CustomRegister',"CustomRegister");
 Route::view('/beautician',"beautProfile");
 Route::view('/reviews',"reviews");
+Route::view('/logout',"logout");
 Route::view('/booking',"booking");
 Route::view('/services',"services");
 Route::view('/beautServices',"beautservices");

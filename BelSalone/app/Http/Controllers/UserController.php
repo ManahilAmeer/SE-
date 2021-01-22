@@ -44,9 +44,14 @@ else{
           $name=$user->beautician_name;
           $Address=$user->beautician_Address;
           $phone=$user->beautician_Phone;
+
     }
 
         if(count($id)){
+            session_start();
+            $_SESSION['email']=$email;
+           $request->session()->put('name',$email); 
+           $output=$request->session()->get('name');
            return view('beautProfile',['name'=>$name,'address'=>$Address,'email'=>$email,'phone'=>$phone]);
         }
         else{
@@ -55,5 +60,7 @@ else{
         
         }
 }
+
+
 }
 ?>

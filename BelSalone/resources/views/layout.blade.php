@@ -1,4 +1,19 @@
+
+<?php
+//somewhere set a value
+
+use phpDocumentor\Reflection\Types\Null_;
+
+if(session()->get('name')){
+    $data='Logout';
+}
+else{
+    $data='Login';
+}
+?>
+
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <title>Bel Salone</title>
@@ -108,7 +123,7 @@
                 <h6 align="center" style="padding-left: 120px">We'll Style You'll Smile</h6>
             </div>
             <nav class="navbar navbar-expand-lg navbar-light" style="padding: 5px 20px; background-color:#e75480;">
-                <a class="navbar-brand" href="#" style="font-weight: 900; font-family: RozhaOne; font-size: 30px; color: white">Bel ₻ Salone</a>
+                <a class="navbar-brand" href="index" style="font-weight: 900; font-family: RozhaOne; font-size: 30px; color: white">Bel ₻ Salone</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -124,11 +139,15 @@
                             <a class="nav-link" href="#" style="font-weight: 700; font-size: 20px;">About</a>
                         </li>
                     </ul>
+                    <button onclick="window.location.href='/logout'" id="Logout" class="btn btn-secondary" style="font-weight: 700;visibility:hidden ; font-size: 20px; background-color:#e75480; border:0px; color:rgba(0,0,0,.5);"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Logout 
+                    </button>
                     <div style="padding-left: 0px; padding-right: 50px">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
+                            
                                 <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" style="font-weight: 700; font-size: 20px; background-color:#e75480; border:0px; color:rgba(0,0,0,.5);"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button id="LoginBTn" class="btn btn-secondary dropdown-toggle" style="font-weight: 700; font-size: 20px; background-color:#e75480; border:0px; color:rgba(0,0,0,.5);"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Login
                                     </button>
                                     <div class="dropdown-menu" style="font-weight: 700; font-size: 14px; background-color:pink; border:0px; color:rgba(0,0,0,.5);" aria-labelledby="dropdownMenuButton">
@@ -218,4 +237,18 @@
             <!-- Copyright -->
         </footer>
     </body>
+
+<script>
+// then echo it into the js/html stream
+// and assign to a js variable
+var     spge = '<?php echo $data ;?>';
+
+// then
+if(spge=='Logout'){
+document.getElementById('LoginBTn').style.visibility='hidden';
+document.getElementById('Logout').style.visibility='visible';
+}
+
+</script>
+            
 </html>

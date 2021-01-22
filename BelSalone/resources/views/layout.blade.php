@@ -50,7 +50,7 @@ else{
                 background-color: pink;
                 height: 100%;
                 overflow: auto;
-                flex-grow: 1;
+                flex-grow: 2;
             }
             .sidebar a {
                 display: block;

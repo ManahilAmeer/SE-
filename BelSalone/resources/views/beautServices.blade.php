@@ -26,23 +26,23 @@
         </tbody>
     </table>
     <div style="margin-top: 60px; margin-right: 50%; padding: 30px 20px; background-color:pink;">
-        <form style="font-size: 22px;">
+        <form style="font-size: 22px;" method="GET" action="{{URL::to('/Supdate')}}">
             <div align="center" class="form-group form-col">
                 <div class="form-group col-md-7 mb-3">
                     <label for="inputCategory" style="font-weight: 600">Enter Category</label>
                     <div>
-                    <select id="mySelect"  style="width:300px;font-weight: 500;background-color:pink;color:#6c757d; border-radius: 8px;" required>
+                    <select id="mySelect" name="category" style="width:300px;font-weight: 500;background-color:pink;color:#6c757d; border-radius: 8px;" required>
     <option >Choose...</option>
     <option>...</option>
   </select>
                 </div>
                 <div class="form-group col-md-7 mb-3">
                     <label for="inputService" style="font-weight: 600">Enter Service</label>
-                    <input id="Service" type="text" class="form-control" style="font-weight: 500; border-radius: 8px;" id="inputService" placeholder="Service" required>
+                    <input id="Service" name="service" type="text" class="form-control" style="font-weight: 500; border-radius: 8px;" id="inputService" placeholder="Service" required>
                 </div>
                 <div class="form-group col-md-7 mb-3">
                     <label for="inputPrice" style="font-weight: 600">Enter Price</label>
-                    <input id="IPrice" type="number" min="100" step="10" class="form-control" style="font-weight: 500; border-radius: 8px;" id="inputPrice" placeholder="0" required>
+                    <input id="IPrice" name="price" type="number" min="100" step="10" class="form-control" style="font-weight: 500; border-radius: 8px;" id="inputPrice" placeholder="0" required>
                 </div>
                 <div style="margin-top: 30px; display: flex; flex-direction: row; justify-content: center;">
                     <button id="Addbtn" type="submit" class="form-control col-md-3 mb-3 btn btn-primary" style="background-color: #e75480; color: white; border: 2px solid #e75480; border-radius: 20px; font-weight: 700">Add</button>
@@ -54,8 +54,13 @@
 </div>
 <script>
     function Update(){
-          document.getElementById("mySelect").value = document.getElementsByClassName('SName')[0].textContent;
-        document.getElementById("Service").value = document.getElementsByClassName('CName')[0].textContent;
+          var sel=document.getElementById("mySelect");
+          var opt=document.createElement('option')
+          var txt=document.getElementsByClassName('CName')[0].textContent;
+          opt.appendChild(document.createTextNode(document.getElementsByClassName('CName')[0].textContent));
+          opt.value=txt;
+          sel.appendChild(opt);
+        document.getElementById("Service").value = document.getElementsByClassName('SName')[0].textContent;
         document.getElementById("IPrice").value = document.getElementsByClassName('Price')[0].textContent;
         Ubtn=document.getElementById('Updatebtn').disabled = false;
         Abtn=document.getElementById('Addbtn').disabled = true;

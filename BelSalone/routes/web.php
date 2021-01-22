@@ -33,6 +33,7 @@ Route::view('/approvedAppointments',"approvedAppointments");
 Route::get('/store',"UserController@store");
 Route::get('/logs',"UserController@logs");
 Route::get('/update',"BeautProfileUpdater@update");
+Route::get('/Supdate',"BeautServiceUpdater@update");
 Route::get('/CustomStore',"CustomerController@CustomStore");
 Route::get('/Customlogs',"CustomerController@Customlogs");
 Route::get('/storeSession',"sessionController@storeSession");

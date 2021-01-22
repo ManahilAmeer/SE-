@@ -16,11 +16,21 @@
         </thead>
         <tbody style="color:black; background-color:pink; font-size: 18px; font-weight:400;">
             <tr>
-                <th scope="row" style="border-top: 2px solid #e75480;">1</th>
+                <th class="number" scope="row" style="border-top: 2px solid #e75480;">1</th>
                 <td class="SName" style="border-top: 2px solid #e75480;">Party Makeup</td>
                 <td class="CName" style="border-top: 2px solid #e75480;">Makeup</td>
                 <td class="Price" style="border-top: 2px solid #e75480;">2000</td>
-                <td style="border-top: 2px solid #e75480;"><button type="button" onclick='Update();' class="buttons">Update</button></td>
+                <td style="border-top: 2px solid #e75480;"><button type="button" onclick='Update(1);' class="buttons">Update</button></td>
+                <td style="border-top: 2px solid #e75480;"><button type="button" class="buttons">Delete</button></td>
+            </tr>
+        </tbody>
+        <tbody style="color:black; background-color:pink; font-size: 18px; font-weight:400;">
+            <tr>
+                <th class="number" scope="row" style="border-top: 2px solid #e75480;">2</th>
+                <td class="SName" style="border-top: 2px solid #e75480;">Naya Makeup</td>
+                <td class="CName" style="border-top: 2px solid #e75480;">Makeup</td>
+                <td class="Price" style="border-top: 2px solid #e75480;">200</td>
+                <td style="border-top: 2px solid #e75480;"><button type="button" onclick='Update(2);' class="buttons">Update</button></td>
                 <td style="border-top: 2px solid #e75480;"><button type="button" class="buttons">Delete</button></td>
             </tr>
         </tbody>
@@ -53,17 +63,19 @@
     </div>
 </div>
 <script>
-    function Update(){
+    function Update(n){
           var sel=document.getElementById("mySelect");
           var opt=document.createElement('option')
-          var txt=document.getElementsByClassName('CName')[0].textContent;
-          opt.appendChild(document.createTextNode(document.getElementsByClassName('CName')[0].textContent));
+          var txt=document.getElementsByClassName('CName')[n-1].textContent;
+          opt.appendChild(document.createTextNode(document.getElementsByClassName('CName')[n-1].textContent));
           opt.value=txt;
           sel.appendChild(opt);
-        document.getElementById("Service").value = document.getElementsByClassName('SName')[0].textContent;
-        document.getElementById("IPrice").value = document.getElementsByClassName('Price')[0].textContent;
+        document.getElementById("Service").value = document.getElementsByClassName('SName')[n-1].textContent;
+        document.getElementById("IPrice").value = document.getElementsByClassName('Price')[n-1].textContent;
         Ubtn=document.getElementById('Updatebtn').disabled = false;
-        Abtn=document.getElementById('Addbtn').disabled = true;
+        Abtn=document.getElementById('Addbtn');
+        Abtn.disabled = true;
+        //Abtn.textContent=num;
 
     }
 </script>

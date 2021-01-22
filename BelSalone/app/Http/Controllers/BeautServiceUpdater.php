@@ -20,7 +20,7 @@ class BeautServiceUpdater extends Controller
         $matchThese = ['category_name' => $category];
         $id=DB::table('category')->where($matchThese)->get()->toArray();
         foreach ($id as $user) {
-        echo $category_id=$user->category_id;
+        $category_id=$user->category_id;
 
     }
     DB::update('UPDATE service SET service_name=?,service_price=?,category_id=? WHERE service_name=? ',[$service,$price,$category_id,$service]);

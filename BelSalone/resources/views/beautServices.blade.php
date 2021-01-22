@@ -39,24 +39,24 @@
         <form style="font-size: 22px;" method="GET" action="{{URL::to('/Supdate')}}">
             <div align="center" class="form-group form-col">
                 <div class="form-group col-md-7 mb-3">
-                    <label for="inputCategory" style="font-weight: 600">Enter Category</label>
+                    <label for="inputCategory" style="font-weight: 500; color: black">Enter Category</label>
                     <div>
-                    <select id="mySelect" name="category" style="width:300px;font-weight: 500;background-color:pink;color:#6c757d; border-radius: 8px;" required>
+                    <select id="mySelect" name="category" class="form-control" style="font-weight: 500;; border-radius: 10px; background-color: white" required>
     <option >Choose...</option>
     <option>...</option>
   </select>
                 </div>
                 <div class="form-group col-md-7 mb-3">
-                    <label for="inputService" style="font-weight: 600">Enter Service</label>
-                    <input id="Service" name="service" type="text" class="form-control" style="font-weight: 500; border-radius: 8px;" id="inputService" placeholder="Service" required>
+                    <label for="inputService" style="font-weight: 500; ; color: black">Enter Service</label>
+                    <input id="Service" name="service" type="text" class="form-control" style="font-weight: 500; ; border-radius: 10px; background-color: white" id="inputService" placeholder="Service" required>
                 </div>
                 <div class="form-group col-md-7 mb-3">
-                    <label for="inputPrice" style="font-weight: 600">Enter Price</label>
-                    <input id="IPrice" name="price" type="number" min="100" step="10" class="form-control" style="font-weight: 500; border-radius: 8px;" id="inputPrice" placeholder="0" required>
+                    <label for="inputPrice" style="font-weight: 500; color: black">Enter Price</label>
+                    <input id="IPrice" name="price" type="number" min="100" step="10" class="form-control" style="font-weight: 500; ; border-radius: 10px; background-color: white" id="inputPrice" placeholder="0" required>
                 </div>
                 <div style="margin-top: 30px; display: flex; flex-direction: row; justify-content: center;">
-                    <button id="Addbtn" type="submit" class="form-control col-md-3 mb-3 btn btn-primary" style="background-color: #e75480; color: white; border: 2px solid #e75480; border-radius: 20px; font-weight: 700">Add</button>
-                    <button id="Updatebtn" type="submit" class="form-control col-md-3 mb-3 btn btn-primary" style="margin-left: 30px; background-color: #e75480; color: white; border: 2px solid #e75480; border-radius: 20px; font-weight: 700" disabled>Update</button>
+                    <button id="Addbtn" type="submit" class="btn btn-primary" style="width: 30%; background-color: #e75480; color: white; border: 2px solid #e75480; border-radius: 20px; font-weight: 700">Add</button>
+                    <button id="Updatebtn" type="submit" class="btn btn-primary" style="width: 30%; margin-left: 30px; background-color: #e75480; color: white; border: 2px solid #e75480; border-radius: 20px; font-weight: 700" disabled>Update</button>
                 </div>
             </div> 
         </form>

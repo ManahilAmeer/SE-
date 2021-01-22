@@ -12,7 +12,7 @@
         <a href="appointments" class="w3-button w3-hover-pink">Appointments</a>
         <a href="approvedAppointments" class="w3-button w3-hover-pink">Approved Appointments</a>
     </div>
-    <div style="flex-grow: 9; border: 2px solid #e75480;">
+    <div style="flex-grow: 8; border: 2px solid #e75480;">
         @yield('beaut_profile')
         @yield('appointment')
         @yield('approved_appointment')

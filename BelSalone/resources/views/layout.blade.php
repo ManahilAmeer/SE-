@@ -55,19 +55,18 @@ else{
             .sidebar a {
                 display: block;
                 font-weight: 600; 
-                font-size: 24px;
+                font-size: 22px;
                 width: 100%; 
                 height: 10%; 
                 background-color: pink;
                 text-decoration: none;
                 text-align: left;
                 border-bottom: 2px solid #e75480;
-                padding: 18px;
+                color: black;
             }
                 /* Active/current link */
             .sidebar a:active {
-                background-color: #e75480;
-                color: white;
+                color: black;
             }
             /* Responsive layout - makes a one column layout instead of a two-column layout */
             @media (max-width: 800px) {

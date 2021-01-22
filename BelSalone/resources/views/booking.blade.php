@@ -6,30 +6,30 @@
         <div align="center" style="background-color: pink; padding: 80px 0px; border: 2px solid #e75480; border-radius: 20px">
             <div align="center" class="form-group form-col">
                 <div class="form-group col-md-5 mb-3">
-                    <label for="BeautName" style="font-weight: 500">Beautician Name</label>
+                    <label for="BeautName" style="font-weight: 500; color: black">Beautician Name</label>
                     <div col-md-4>
-                        <input type="text" id="beautName" class="form-control" style="background-color: white" placeholder="Beautician Name" readonly>
+                        <input type="text" id="beautName" class="form-control" style="background-color: white; border-radius: 10px" placeholder="Beautician Name" readonly>
                     </div>
                 </div>
                 <div class="form-group col-md-5 mb-3">
-                    <label for="ServiceName" style="font-weight: 500">Service Name</label>
-                    <input type="text" id="serviceName" class="form-control" style="background-color: white" placeholder="Service Name" readonly>
+                    <label for="ServiceName" style="font-weight: 500; color: black">Service Name</label>
+                    <input type="text" id="serviceName" class="form-control" style="background-color: white; border-radius: 10px" placeholder="Service Name" readonly>
                 </div>
                 <div class="form-group col-md-5 mb-3">
-                    <label for="date-input" style="font-weight: 500">Enter Date</label>
-                    <input class="form-control" type="date" value="2021-02-18" id="date-input" required>
+                    <label for="date-input" style="font-weight: 500; color: black">Enter Date</label>
+                    <input class="form-control" type="date" style="background-color: white; border-radius: 10px" value="2021-02-18" id="date-input" required>
                 </div>
                 <div class="form-group col-md-5 mb-3">
-                    <label for="time-input" style="font-weight: 500">Enter Time</label>
-                    <input class="form-control" type="time" value="12:00:00" id="time-input" min="12:00" max="22:00" required>
+                    <label for="time-input" style="font-weight: 500; color: black">Enter Time</label>
+                    <input class="form-control" type="time" style="background-color: white; border-radius: 10px" value="12:00:00" id="time-input" min="12:00" max="22:00" required>
                 </div>
                 <div class="form-group col-md-5 mb-3">
-                    <label for="Payment" style="font-weight: 500">Payment</label>
+                    <label for="Payment" style="font-weight: 500; color: black">Payment</label>
                     <div col-md-4>
-                        <input type="number" id="Price" min="100" step="10" class="form-control" style="background-color: white" placeholder="0" readonly>
+                        <input type="number" id="Price" min="100" step="10" class="form-control" style="background-color: white; border-radius: 10px" placeholder="0" readonly>
                     </div>
                 </div>
-                <button type="submit" class="form-control col-md-3 mb-3 btn btn-primary" style="background-color: #e75480; color: white; margin-top: 20px;  border: 2px solid #e75480; border-radius: 20px; font-weight: 700">Book Appointment</button>
+                <button type="submit" class="btn btn-primary" style="width: 60%; background-color: #e75480; color: white; margin-top: 20px;  border: 2px solid #e75480; border-radius: 20px; font-weight: 700">Book Appointment</button>
             </div>
         </div>
     </form>
